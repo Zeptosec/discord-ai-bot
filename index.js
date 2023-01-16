@@ -5,6 +5,13 @@ import { gpt } from "./commands/gpt.js";
 dotenv.config();
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+var http = require('http');
+
+http.createServer(function(req, res) {
+	res.write("I'm alive");
+	res.end();
+}).listen(8080);
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
