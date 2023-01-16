@@ -10,7 +10,7 @@ import http from 'http';
 http.createServer(function(req, res) {
 	res.write("I'm alive");
 	res.end();
-}).listen(8080);
+}).listen(process.env.PORT || 8000);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
