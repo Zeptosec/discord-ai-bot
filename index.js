@@ -5,7 +5,7 @@ import { gpt } from "./commands/gpt.js";
 dotenv.config();
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-var http = require('http');
+import http from 'http';
 
 http.createServer(function(req, res) {
 	res.write("I'm alive");
